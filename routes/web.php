@@ -3,6 +3,7 @@
 
 
 Route::get('/', function () {return view('pages.index');});
+Route::get('demo', function () {return view('pages.index');});
 //auth & user
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
