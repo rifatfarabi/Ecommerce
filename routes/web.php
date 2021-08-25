@@ -52,9 +52,23 @@ Route::get('delete/coupon/{id}','Admin\Category\CouponController@DeleteCoupon');
 Route::get('edit/coupon/{id}','Admin\Category\CouponController@EditCoupon');
 Route::post('update/coupon/{id}','Admin\Category\CouponController@UpdateCoupon');
 
+
 //Newslaters (Backend)======
 Route::get('admin/newslater','Admin\Category\CouponController@Newslater')->name('admin.newslater');
 Route::get('delete/sub/{id}','Admin\Category\CouponController@DeleteSub');
+
+//For Show Sub Category with Ajax
+Route::get('get/subcategory/{category_id}','Admin\ProductController@GetSubcat');
+
+//Product All Route==
+Route::get('admin/product/all','Admin\ProductController@index')->name('all.product');
+Route::get('admin/product/add','Admin\ProductController@create')->name('add.product');
+Route::post('admin/product/store','Admin\ProductController@store')->name('store.product');
+
+Route::get('inactive/product/{id}','Admin\ProductController@inactive');
+Route::get('active/product/{id}','Admin\ProductController@active');
+Route::get('delete/product/{id}','Admin\ProductController@deleteProduct');
+Route::get('view/product/{id}','Admin\ProductController@ViewProduct');
 
 //Frontend All Routes======
 Route::post('store/newslater','FrontendController@StoreNewslatter')->name('store.newslater');
