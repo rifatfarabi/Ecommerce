@@ -128,6 +128,6 @@ class ProductController extends Controller
                         ->where('products.id',$id)
                         ->first();
 
-                        return view('admin.product.show', compact($product));
+                        return view('admin.product.show', compact('product'));
         }
 }
