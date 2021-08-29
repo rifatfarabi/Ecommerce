@@ -70,6 +70,10 @@ Route::get('active/product/{id}','Admin\ProductController@active');
 Route::get('delete/product/{id}','Admin\ProductController@deleteProduct');
 Route::get('view/product/{id}','Admin\ProductController@ViewProduct');
 
+#Blog Admin All
+Route::get('blog/category/list','Admin\PostController@BlogCatList')->name('add.blog.category');
+Route::post('admin/store/blog','Admin\PostController@BlogCatStore')->name('store.blog.category');
+
 //Frontend All Routes======
 Route::post('store/newslater','FrontendController@StoreNewslatter')->name('store.newslater');
 
